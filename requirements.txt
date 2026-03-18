@@ -1,0 +1,24 @@
+sentence-transformers==2.6.1
+numpy==1.26.4
+faiss-cpu
+llama-cpp-python
+fastapi
+uvicorn
+streamlit
+requests
+pypdf
+
+
+# fastapi
+# uvicorn
+# streamlit
+# requests
+
+# sentence-transformers
+# faiss-cpu
+
+# llama-cpp-python
+
+# pypdf
+# numpy<2
+# torch==2.1.2+cpu --index-url https://download.pytorch.org/whl/cpu

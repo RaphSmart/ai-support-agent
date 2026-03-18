@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv
+venv
+env
+
+# Git
+.git
+.gitignore
+
+# Mac
+.DS_Store
+
+# Notebooks
+notebooks/
+
+# Huggingface cache
+.cache/
+huggingface/
+
+# Models
+models/
+
+# Local data
+data/
+
+# FAISS index
+*.index
+
+# Logs
+*.log
