@@ -7,6 +7,7 @@ aiagent/
 
 # Python cache
 __pycache__/
+*.py[cod]
 *.pyc
 *.pyo
 *.pyd
