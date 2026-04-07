@@ -66,8 +66,9 @@ class LocalLLM:
 
         output = self.llm(
             prompt,
-            max_tokens=80,
-            temperature=0.1,
+            max_tokens=150,
+            temperature=0.3,
+            top_p=0.9,
             stop=["User:", "Assistant:"]
         )
 

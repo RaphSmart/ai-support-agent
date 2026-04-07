@@ -76,6 +76,22 @@ Opens in browser
 http://localhost:8501
 ```
 
+# If model is not found
+download from:
+```bash
+https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF
+```
+Download file:
+tinyllama-1.1b-chat-v1.0.Q4_K_M.gguf
+
+📂 Place the downloaded file in models folder:
+models/tinyllama.gguf
+(Create the folder if it doesn't already exist)
+
+# If data folder is not found
+Create the folder:
+data/
+
 # 📚 Add Knowledge
 Place documents in the data folder
 Supported formats:

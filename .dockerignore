@@ -27,7 +27,7 @@ huggingface/
 models/
 
 # Local data
-data/
+# data/
 
 # FAISS index
 *.index

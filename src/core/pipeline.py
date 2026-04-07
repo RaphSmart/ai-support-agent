@@ -60,11 +60,15 @@ class SupportAgentPipeline:
         question_embedding = self.embedder.embed([question])[0]
         results = self.vectorstore.search(question_embedding, k=k)
 
+        # handle greetings
+        if question.lower().strip() in ["hi", "hello", "hey"]:
+            return "Hello! 👋 How can I help you today?"
+        
         # Hendle empty context
         if not results:
-            context = "No relevant knowledfe found."
-        else:
-            context = "\n".join(results)
+            return "I don't have enough information to answer that yet. Please upload relevant documents."
+
+        context = "\n".join(results)
 
         conversation_history = "\n".join(self.memory[-3:])  # last 4 messages only
 
@@ -72,9 +76,11 @@ class SupportAgentPipeline:
 You are a professional AI support agent.
 
 Rules:
+- If the user greets you, respond politely
 - Answer ONLY using the provided knowledge
 - If the answer is not in the knowledge, say "I don't know"
-- Be concise and helpful
+- Do NOT invent questions
+- Be concise and clear
 
 <|context|>
 {context}
